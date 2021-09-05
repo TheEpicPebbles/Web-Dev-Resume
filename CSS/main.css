@@ -1,0 +1,75 @@
+*{
+	font-family: 'Newsreader', serif;
+}
+body{
+	overflow-x: hidden;
+}
+b{
+	font-family: 'Benne', serif;
+}
+#TitleContainer{
+	-webkit-box-shadow: 0px 0px 15px 5px #000000;
+	box-shadow: 0px 0px 15px 5px #000000;
+}
+#CV, h1{
+	width: 75%;
+	-webkit-box-shadow: 0px 0px 15px 5px #000000; 
+	box-shadow: 0px 0px 15px 5px #000000;
+}
+#signature{
+	font-family: 'Cedarville Cursive', cursive;
+}
+	/*navicon Styling */
+.navicon div {
+	height: 4px;
+	margin: 5px;
+	border-radius: 25px;
+	transition:  ease 0.3s;
+	background: linear-gradient(140deg, rgba(100,202,212,1) 32%, rgba(56,122,233,1) 99%);
+}
+.navicon {
+	position: sticky;
+	top: 1%;
+	width: 3em;
+	display: block;
+	margin: 1em 0 0 1em;
+	padding-top: 5px;
+	border: black 3px;
+	border-radius: 5px;
+}
+
+	/*Navbar Styling*/
+.lilUziVertNavBar {
+	display: none;
+	border-radius: 5px;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 15%;
+	background: #222222;
+	justify-content: center;
+	opacity: 0;
+	font: italic bold 15px 'Pacifico', serif;
+	margin: auto;
+	background-image: -webkit-linear-gradient(300deg, blue 0%, white 33%, red 66%, blue 100%);
+	height: 100%;
+	width: 50vw;
+	-webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.85); 
+	box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.85);
+	z-index: 99;
+}
+.navbarElement {
+	text-align: center;
+	text-decoration: none;
+	color: #9ED2FF;
+	cursor: pointer;
+	background-color: #333333;
+	display: block;
+	border: 3px black;
+}
+.navbarElement :hover{
+	background-color: #111111;
+	color:red;
+}
+.navbarElement :active{
+	color: #2458EB;
+}
