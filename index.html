@@ -33,6 +33,83 @@
 	<title>Juan Carlos Mancilla Jr</title>
 
 </head>
+<style type="text/css">
+	*{
+	font-family: 'Newsreader', serif;
+}
+body{
+	overflow-x: hidden;
+}
+b{
+	font-family: 'Benne', serif;
+}
+#TitleContainer{
+	-webkit-box-shadow: 0px 0px 15px 5px #000000;
+	box-shadow: 0px 0px 15px 5px #000000;
+}
+#CV, h1{
+	width: 75%;
+	-webkit-box-shadow: 0px 0px 15px 5px #000000; 
+	box-shadow: 0px 0px 15px 5px #000000;
+}
+#signature{
+	font-family: 'Cedarville Cursive', cursive;
+}
+	/*navicon Styling */
+.navicon div {
+	height: 4px;
+	margin: 5px;
+	border-radius: 25px;
+	transition:  ease 0.3s;
+	background: linear-gradient(140deg, rgba(100,202,212,1) 32%, rgba(56,122,233,1) 99%);
+}
+.navicon {
+	position: sticky;
+	top: 1%;
+	width: 3em;
+	display: block;
+	margin: 1em 0 0 1em;
+	padding-top: 5px;
+	border: black 3px;
+	border-radius: 5px;
+}
+
+	/*Navbar Styling*/
+.lilUziVertNavBar {
+	display: none;
+	border-radius: 5px;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 15%;
+	background: #222222;
+	justify-content: center;
+	opacity: 0;
+	font: italic bold 15px 'Pacifico', serif;
+	margin: auto;
+	background-image: -webkit-linear-gradient(300deg, blue 0%, white 33%, red 66%, blue 100%);
+	height: 100%;
+	width: 50vw;
+	-webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.85); 
+	box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.85);
+	z-index: 99;
+}
+.navbarElement {
+	text-align: center;
+	text-decoration: none;
+	color: #9ED2FF;
+	cursor: pointer;
+	background-color: #333333;
+	display: block;
+	border: 3px black;
+}
+.navbarElement :hover{
+	background-color: #111111;
+	color:red;
+}
+.navbarElement :active{
+	color: #2458EB;
+}
+</style>
 <body class="w-100 d-block justify-content-center bg-info">
 	<a class="btn-outline-dark border border-info m-1 px-1 py-0 navicon">
 	    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
@@ -237,5 +314,148 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+
+/* for when you need to include another js file within another
+$.getScript('/path/to/imported/script.js', function()
+{
+    // script is now loaded and executed.
+    // put your dependent JS here.
+});
+*/
+
+function showNavBar() {
+  $('#navBarContainer').css('height', 'px')
+  $(this).toggleClass("open");
+  $(".lilUziVertNavBar")
+  .css('z-index', '6')
+  .slideDown(269 ,'swing')
+  .animate(
+    { opacity: 1 },
+    { queue: false, duration: 'slow' }
+  );
+}
+function hideNavBar() {
+    $(".lilUziVertNavBar")
+  .css('opacity', 1)
+  .slideUp(269 ,'swing')
+  .animate(
+    { opacity: 0 },
+    { queue: false, duration: 'slow' },
+    {complete: function(){
+      $(this).css('display', 'none')
+        .css('z-index', '-1');
+
+        console.log("SHIUT");
+      }
+    });
+}
+var navDown = false;
+$(".navicon").click(function() {
+    if (!navDown) {
+      showNavBar();
+      navDown = true;
+    } else {
+      hideNavBar();
+      navDown = false;
+    }
+});
+$('#CV_slideButt').click(function () {
+  $("html, body").animate({
+    scrollTop: $("#CV_slide").offset().top
+  }, 100);
+  hideNavBar();
+  hideNavBarContainer(".pullUpButton")
+  navContainerDown = navDown = false;
+});
+$('#SkillsButt').click(function () {
+  $("html, body").animate({
+    scrollTop: $("#Skills").offset().top
+  }, 100);
+  hideNavBar();
+  hideNavBarContainer(".pullUpButton")
+  navContainerDown = navDown = false;
+});
+$('#EducationButt').click(function () {
+  $("html, body").animate({
+    scrollTop: $("#Education").offset().top
+  }, 100);
+  hideNavBar();
+  hideNavBarContainer(".pullUpButton")
+  navContainerDown = navDown = false;
+});
+$('#WorkButt').click(function () {
+  $("html, body").animate({
+    scrollTop: $("#Work").offset().top
+  }, 100);
+  hideNavBar();
+  hideNavBarContainer(".pullUpButton")
+  navContainerDown = navDown = false;
+});
+$('#ProjexButt').click(function(){
+    $("html, body").animate({
+    scrollTop: $("#Projex").offset().top
+  }, 100);
+  hideNavBar();
+  hideNavBarContainer(".pullUpButton")
+  navContainerDown = navDown = false;
+});
+
+function hideNavBarContainer(lol) {
+    $('.titleContainer').slideUp(269, 'swing');
+    navContainerDown = false;
+    $('.appointmentButton').animate({ 
+    top: "85%",
+    }, 269 );
+    $(lol).animate({ 
+    top: "0%",
+    }, 269 );
+    $(lol).animate(
+      { deg: 180 },
+      {
+        duration: 450,
+        step: function(now) {
+          $(lol).css({ transform: 'rotate(' + now + 'deg)' });
+        }
+      }
+    ); 
+}
+function showNavBarContainer(lol) {
+    $('.titleContainer').slideDown(269, 'swing');
+    navContainerDown = true;
+    $('.appointmentButton').animate({ 
+    top: "50%",
+    }, 269 );
+    $(lol).animate({ 
+      top: "12%",
+    }, 269 );
+    $(lol).animate(
+      { deg: 0 },
+      {
+        duration: 450,
+        step: function(now) {
+          $(lol).css({ transform: 'rotate(' + now + 'deg)' });
+        }
+      }
+    );
+}
+
+navContainerDown = true;
+$('.pullUpButton').click(function(){
+  if(navContainerDown){
+    if(navDown){
+      hideNavBar();
+        navDown = false;
+    }
+    hideNavBarContainer(this);
+  } else {
+    showNavBarContainer(this);
+  }
+});
+	</script>
 </body>
 </html>
