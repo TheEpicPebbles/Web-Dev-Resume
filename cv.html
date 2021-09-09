@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!--Meta-->
+		<meta charset="utf-8">
+		<meta name="author" content="Juan Carlos Mancilla Jr">
+
+		<!--CSS-->
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="CSS/main.css">	
+			<!--Fonts-->
+				<!--Main Font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+				<!--Para Font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap" rel="stylesheet">
+				<!--Signature Font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+				<!--Projex Font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+		<!--JS-->
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+			<!--d3.js-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js" integrity="sha512-1e0JvdNhUkvFbAURPPlFKcX0mWu/b6GT9e0uve7BW4MFxJ15q4ZCd/Llz+B7/oh+qhw7/l6Q1ObPt6aAuR01+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<title>CV</title>
+</head>
+<style type="text/css">
+	*{
+	font-family: 'Newsreader', serif;
+}
+body{
+	overflow-x: hidden;
+}
+b{
+	font-family: 'Benne', serif;
+}
+#TitleContainer{
+	border: 5px double #1A3960;
+	-webkit-box-shadow: 0px 0px 15px 5px #000000;
+	box-shadow: 0px 0px 15px 5px #000000;
+}
+#CV{
+	border: double 6px #333333;
+}
+#CV, h1{
+	width: 75%;
+	-webkit-box-shadow: 0px 0px 15px 5px #000000; 
+	box-shadow: 0px 0px 15px 5px #000000;
+}
+#signature{
+	font-family: 'Cedarville Cursive', cursive;
+}
+	/*navicon Styling */
+.navicon div {
+	height: 4px;
+	margin: 5px;
+	border-radius: 25px;
+	transition:  ease 0.3s;
+	background: linear-gradient(140deg, rgba(100,202,212,1) 32%, rgba(56,122,233,1) 99%);
+}
+.navicon {
+	position: sticky;
+	top: 1%;
+	width: 3em;
+	display: block;
+	margin: 1em 0 0 1em;
+	padding-top: 5px;
+	border: black 3px;
+	border-radius: 5px;
+}
+
+	/*Navbar Styling*/
+.lilUziVertNavBar {
+	display: none;
+	border-radius: 5px;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 15%;
+	background: #222222;
+	justify-content: center;
+	opacity: 0;
+	font: bold 15px 'Pacifico', serif;
+	margin: auto;
+	background-image: -webkit-linear-gradient(120deg, rgba(230,15,15,1) 0%, rgba(255,255,255,1) 66%, rgba(55,228,51,1) 100%);
+	height: 100%;
+	width: 50vw;
+	-webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.85); 
+	box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.85);
+	z-index: 99;
+}
+.navbarElement {
+	text-align: center;
+	text-decoration: none;
+	color: #9ED2FF;
+	cursor: pointer;
+	background-color: #333333;
+	display: block;
+	border: 3px black;
+}
+.navbarElement :hover{
+	background-color: #111111;
+	color:red;
+}
+.navbarElement :active{
+	color: #2458EB;
+}
+</style>
+<body>
+	<a class="btn-outline-dark border border-info m-1 px-1 py-0 navicon">
+	    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" viewBox="0 0 448 512" id="naviconSVG"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+	</a>
+	<script type="text/javascript">
+		$(".navicon").click(function(event) {
+			$("#naviconSVG").hide(100, function() {
+				$(".navicon").attr('class', 'spinner-grow text-primary navicon');
+				setTimeout(function(){
+					$(".navicon").attr('class', 'btn-outline-dark border border-info m-1 px-1 py-0 navicon');
+					$("#naviconSVG").show(150, function(){});
+				}, 500);
+			});
+		});
+	</script>
+	<div class="lilUziVertNavBar fs-3 border border-dark" style="user-select: none;">
+			<h2 class="d-flex justify-content-center disabled btn-primary rounded my-0">🚀Take Me to Juan's...</h2>
+			
+			<hr style="margin-top: 0; height: 5px;">
+			
+			<div class="d-flex justify-content-center">
+				<a href="https://stackoverflow.com/users/9987436/theepicpebbles" target="_blank" class="d-flex justify-content-center btn-secondary rounded border border-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="GitHub Profile" >
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
+				</a>
+				<a href="https://stackoverflow.com/users/9987436/theepicpebbles" target="_blank" class="d-flex justify-content-center btn-warning rounded border border-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="StackOverflow Profile" >
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-8.512 8.272l5.532 3.243-.686 1.162-5.533-3.243.687-1.162zm-1.456 3.113l6.185 1.739-.332 1.23-6.204-1.667.351-1.302zm-.672 2.813l6.498.65-.117 1.28-6.504-.586.123-1.344zm-.193 2.469h6.667v1.333h-6.667v-1.333zm8.833 3.333h-11v-7h1v6h9v-6h1v7zm-.852-8.704l-3.56-5.219 1.115-.76 3.559 5.219-1.114.76zm1.356-.841l-1.08-6.224 1.328-.231 1.082 6.224-1.33.231z"/></svg>
+				</a>
+				<a href="https://www.linkedin.com/in/juan-carlos-mancilla-jr/" class="d-flex justify-content-center btn-light rounded border border-info" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LinkedIn Profile" >
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+				</a>
+			</div>
+			
+			<hr style="margin-bottom: 1px; height: 5px">
+	     	<a class="navbarElement btn-secondary rounded border border-primary p-1" id="home"> Home Sweet Home 🏠</a>
+	     	<a class="navbarElement btn-secondary rounded border border-primary p-1" id="CV_slideButt"> CV 📜</a>
+	     	<a class="navbarElement btn-secondary rounded border border-primary p-1" id="SkillsButt"> Skills 💪</a>
+	     	<a class="navbarElement btn-secondary rounded border border-primary p-1" id="EducationButt"> Education 🎓</a>
+	     	<a class="navbarElement btn-secondary rounded border border-primary p-1" id="WorkButt"> Work Experience 👨‍💻</a>
+	     	<a class="navbarElement btn-secondary rounded border border-primary p-1" id="ProjexButt">Projects Section 💡</a>
+	     	<a class="navbarElement btn-secondary rounded border border-primary p-1" href="https://trello.com/b/6BTaOXkO/the-projex-2021-ad-astra" target="_blank">Projects Trello Page (Opens in new Tab)</a>
+	    	
+	    </div>
+	<div class="d-flex justify-content-center">
+		<div class="d-block">
+			<h3 class="text-center fs-1">CV</h3>
+			<div class="d-flex justify-content-center">
+				<p class="lh-3 fw-bold bg-light rounded p-3 fs-2" id="CV">
+					<i class="d-flex justify-content-center fs-1" id="signature" > Dear hiring manager, </i>
+
+					<br>
+
+					&emsp;&emsp;&emsp;&emsp;I am writing to express my interest in a <span id="signature" class="p-1 fs-3"> Remote Position </span> at <span id="signature" class="p-1 fs-3">ARM</span>. I would like to prove to you the skills that I may provide while working alongside with you and my potential co-workers/team.
+
+					<br><br>
+
+					&emsp;&emsp;&emsp;&emsp;As a <span id="signature" class="p-1 fs-4">Student ITS Worker</span> at Aurora University I peered into the workflow of IT services in a University environment. How to structure support tickets to be dealt with most efficiently & effectively on a daily basis. The software implemented to achieve our tasks at Aurora University included CallFire, an Email structured ticketing system, and ZenDesk. All in all, the experience taught me best of common issues that occur within the University grade technology that they had and how to maintain the printers available in the computer lab.
+					
+					<br><br>
+					
+					&emsp;&emsp;&emsp;&emsp;As a <span id="signature" class="p-1 fs-4">General Repair Technician</span>, the journey for knowledge has enlightened my scope of what I can know. From software, hardware, and especially motherboard repair. The vast variety of problems ranging from smart phones, laptops, and computers. Let alone the customer base that must be dealt with daily, has sharpened all my skills in order to run the local business’s that I have serviced for in the past. My knowledge compounds with every repair that I do and I thoroughly enjoy giving a customer back their device, better than factory.
+					
+					<br><br>
+					
+					&emsp;&emsp;&emsp;&emsp;Perhaps the greatest asset I can offer is my ability to allow my curiosity to teach me the skills I need to perform my job at upmost standards. I have always been intrigued with fixing computer/coding problems and would love to expand my knowledge while working along-side you and/or my future team. To have an opportunity to expand knowledge is the best excuse to show up. I’m a very quick learner when it comes to projects I am very passionate about. I started teaching myself basic javascript/C# concepts for my first project a semester before I took a AP java class in high school, I got a 4 out of 5 on the AP exam. I do have projects that I have been planning on since then and currently for the next couple of months. My focus right now is web design, although I am superbly interested in getting deeper into the software sector to be the jack of all trades. I would like to clarify that I have reviewed the use of SharePoint & Microsoft as a center for your business and I know that Microsoft has a superb API/infrastructure. And I love that your mission at ARM is solidifying the backbone that helps us come home with food on the table and to keep farmers farming. Merely the opportunities to expand a business with technology is what drives me to push the bar higher when it comes to business dynamics. Internally, infrastructure is what inevitably helps uphold truth to ARM’s mission. For example, I created a simple paperless ticketing system for computer repair shops with PHP and managed with the Trello Rest API, I have a sample in the projects section on my website. I am proud that I made any difference so that there is less stress when our paper system didn’t work. I am looking for flexibility because I am still pursuing my degree. If you would like to contact me, you can contact me via email my phone number as phone calls are most welcome, if text is your route, I will respond as soon as humanly possible. I plan on following up with you to see if we can setup a time to talk. I sincerely appreciate your consideration and look forward to meeting with you.
+					<br><br>
+					<span class="d-flex justify-content-center">  Best Wishes,  <span id="signature" class="p-1">Juan Carlos Mancilla Jr.</span>           Juan Carlos Mancilla Jr. </span>
+
+				</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  	return new bootstrap.Tooltip(tooltipTriggerEl)
+		});
+
+		/* for when you need to include another js file within another
+		$.getScript('/path/to/imported/script.js', function()
+		{
+		    // script is now loaded and executed.
+		    // put your dependent JS here.
+		});
+		*/
+
+		function showNavBar() {
+		  $('#navBarContainer').css('height', 'px')
+		  $(this).toggleClass("open");
+		  $(".lilUziVertNavBar")
+		  .css('z-index', '6')
+		  .slideDown(269 ,'swing')
+		  .animate(
+		    { opacity: 1 },
+		    { queue: false, duration: 'slow' }
+		  );
+		}
+		function hideNavBar() {
+		    $(".lilUziVertNavBar")
+		  .css('opacity', 1)
+		  .slideUp(269 ,'swing')
+		  .animate(
+		    { opacity: 0 },
+		    { queue: false, duration: 'slow' },
+		    {complete: function(){
+		      $(this).css('display', 'none')
+		        .css('z-index', '-1');
+
+		        console.log("SHIUT");
+		      }
+		    });
+		}
+		var navDown = false;
+		$(".navicon").click(function() {
+		    if (!navDown) {
+		      showNavBar();
+		      navDown = true;
+		    } else {
+		      hideNavBar();
+		      navDown = false;
+		    }
+		});
+		$("#home").click(function(event) {
+			loadFile( $(this).html() ,"index.html");
+		});
+		$('#EducationButt').click(function () {
+		  	loadFile( $(this).html() ,"education.html");
+		});
+		$('#SkillsButt').click(function () {
+			loadFile( $(this).html() ,"skills.html");
+		});
+		$('#WorkButt').click(function () {
+			loadFile( $(this).html() ,"work.html");
+		});
+		$('#ProjexButt').click(function(){
+		    loadFile( $(this).html() + `<br>Please scroll down when loaded` ,"index.html");
+		});
+
+		function loadFile(message, filelocation){
+			setTimeout(function(){
+				window.location.href = filelocation;
+			}, 750);
+			$("body").hide('fast', function() {
+				$("body").attr('class', 'd-flex justify-content-center bg-dark');
+				$("body").html(`
+					<div class="d-block justify-content-center bg-dark" style="margin-top:20%;">
+						<div class="fs-1 text-light">Loading ${message}...</div>
+						<div class="d-flex justify-content-center">
+							<div class="spinner-border text-primary"></div>
+						</div>
+					</div>
+				`);
+			});
+		}
+
+		function hideNavBarContainer(lol) {
+		    $('.titleContainer').slideUp(269, 'swing');
+		    navContainerDown = false;
+		    $('.appointmentButton').animate({ 
+		    top: "85%",
+		    }, 269 );
+		    $(lol).animate({ 
+		    top: "0%",
+		    }, 269 );
+		    $(lol).animate(
+		      { deg: 180 },
+		      {
+		        duration: 450,
+		        step: function(now) {
+		          $(lol).css({ transform: 'rotate(' + now + 'deg)' });
+		        }
+		      }
+		    ); 
+		}
+		function showNavBarContainer(lol) {
+		    $('.titleContainer').slideDown(269, 'swing');
+		    navContainerDown = true;
+		    $('.appointmentButton').animate({ 
+		    top: "50%",
+		    }, 269 );
+		    $(lol).animate({ 
+		      top: "12%",
+		    }, 269 );
+		    $(lol).animate(
+		      { deg: 0 },
+		      {
+		        duration: 450,
+		        step: function(now) {
+		          $(lol).css({ transform: 'rotate(' + now + 'deg)' });
+		        }
+		      }
+		    );
+		}
+
+		navContainerDown = true;
+		$('.pullUpButton').click(function(){
+		  if(navContainerDown){
+		    if(navDown){
+		      hideNavBar();
+		        navDown = false;
+		    }
+		    hideNavBarContainer(this);
+		  } else {
+		    showNavBarContainer(this);
+		  }
+		});
+	</script>
+</body>
+</html>
