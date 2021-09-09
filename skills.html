@@ -29,8 +29,8 @@
 		<!--JS-->
 		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-			<!--d3.js-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js" integrity="sha512-1e0JvdNhUkvFbAURPPlFKcX0mWu/b6GT9e0uve7BW4MFxJ15q4ZCd/Llz+B7/oh+qhw7/l6Q1ObPt6aAuR01+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<!--jit.js-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jit/2.0.2/jit.min.js" integrity="sha512-p4hoiQBHEWSH31Vp6LcF5/jwFBwALm4qQ30lb/hJB6nHYAvabOvYD3nzslDVU9sJCvHHXrPe+5Q92MHrbUZT6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<title>CV</title>
 </head>
 <style type="text/css">
@@ -114,7 +114,7 @@ b{
 	color: #2458EB;
 }
 </style>
-<body onload="init();">
+<body>
 	<a class="btn-outline-dark border border-info m-1 px-1 py-0 navicon">
 	    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" viewBox="0 0 448 512" id="naviconSVG"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
 	</a>
@@ -167,6 +167,9 @@ b{
 									
 								</aside>
 								<script type="text/javascript">
+									$(document).ready(function() {
+										init();
+									});
 		                    		var labelType, useGradients, nativeTextSupport, animate;
 
 		                    		(function() {
