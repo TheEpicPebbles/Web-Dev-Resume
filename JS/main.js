@@ -91,9 +91,6 @@ $('#ProjexButt').click(function(){
 function hideNavBarContainer(lol) {
     $('.titleContainer').slideUp(269, 'swing');
     navContainerDown = false;
-    $('.appointmentButton').animate({ 
-    top: "85%",
-    }, 269 );
     $(lol).animate({ 
     top: "0%",
     }, 269 );
@@ -110,9 +107,6 @@ function hideNavBarContainer(lol) {
 function showNavBarContainer(lol) {
     $('.titleContainer').slideDown(269, 'swing');
     navContainerDown = true;
-    $('.appointmentButton').animate({ 
-    top: "50%",
-    }, 269 );
     $(lol).animate({ 
       top: "12%",
     }, 269 );

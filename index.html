@@ -118,15 +118,15 @@ b{
 <body class="w-100">
 	<div class="d-flex justify-content-center bg-info">
 		<div class="d-block justify-content-center bg-info">
-			<a class="btn-outline-dark border border-info m-1 px-1 py-0 navicon">
+			<a class="btn-outline-dark border border-info m-0 px-1 py-0 navicon">
 			    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" viewBox="0 0 448 512" id="naviconSVG"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
 			</a>
 			<script type="text/javascript">
 				$(".navicon").click(function(event) {
 					$("#naviconSVG").hide(100, function() {
-						$(".navicon").attr('class', 'spinner-grow text-primary navicon');
+						$(".navicon").attr('class', 'spinner-grow text-primary navicon m-0');
 						setTimeout(function(){
-							$(".navicon").attr('class', 'btn-outline-dark border border-info m-1 px-1 py-0 navicon');
+							$(".navicon").attr('class', 'btn-outline-dark border border-info m-0 px-1 py-0 navicon');
 							$("#naviconSVG").show(150, function(){});
 						}, 500);
 					});
@@ -511,7 +511,7 @@ b{
 				<h3 class="d-flex justify-content-center fs-1 text-light compRepair" id="signature">Computer Repair Shop | Ticket Management System</h3>
 				<div class="btn btn-outline-light border border-light d-flex justify-content-center" id="repairButt" style="z-index: 3;">More Insight...</div>
 
-				<div class="fs-2 p-3 border border-light rounded" id="repair" style="display: none; overflow-y: scroll; height: 290px;">
+				<div class="fs-2 p-3 border border-light rounded text-light" id="repair" style="display: none; overflow-y: scroll; height: 290px;">
 					&emsp;&emsp;&emsp;&emsp;I saw that there was a problem with the amount of time customers wanted to spend dropping off their device, so I thought that I should create a system that takes in their information quickly and direct that data through Trello REST API so that everyone can see what everyone is working on, including the customer with the correct implementation so there can be non-invasive, only showing information that we deem public and private.
 					<hr>
 					<h2 class="text-center"><b>Skills Strengthened</b></h2>
@@ -756,9 +756,6 @@ function loadFile(message, filelocation){
 function hideNavBarContainer(lol) {
     $('.titleContainer').slideUp(269, 'swing');
     navContainerDown = false;
-    $('.appointmentButton').animate({ 
-    top: "85%",
-    }, 269 );
     $(lol).animate({ 
     top: "0%",
     }, 269 );
@@ -775,9 +772,6 @@ function hideNavBarContainer(lol) {
 function showNavBarContainer(lol) {
     $('.titleContainer').slideDown(269, 'swing');
     navContainerDown = true;
-    $('.appointmentButton').animate({ 
-    top: "50%",
-    }, 269 );
     $(lol).animate({ 
       top: "12%",
     }, 269 );
