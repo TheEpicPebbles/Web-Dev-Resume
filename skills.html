@@ -70,7 +70,8 @@ b{
 .navicon {
 	position: sticky;
 	top: 1%;
-	width: 3em;
+	left: 1%;
+	width: 5em;
 	display: block;
 	margin: 1em 0 0 1em;
 	padding-top: 5px;
@@ -233,7 +234,26 @@ b{
 		                    		                data: {
 		                    		                    relation: "<h4>Cypress Hill</h4><b>Connections:</b><ul><li>Pearl Jam &amp; Cypress Hill <div>(relation: collaboration)</div></li></ul>"
 		                    		                },
-		                    		                children: []
+		                    		                children: [{
+														id: "TypeScript",
+														name: `<div class="d-block justify-content-center">
+																<h5 class="text-center">TypeScript</h5>
+																<img src="images/typescript.png" class="rounded" width="90px" hieght="90px">
+															</div>` ,
+														data: {
+
+														},
+														children: [{
+															id: "ChakraUI",
+															name: `<div class="d-block justify-content-center bg-white rounded p-1">
+																		<img src="images/chakra.png" class="rounded" width="110px" hieght="110px">
+																	</div?`,
+															data: {
+
+															},
+															children: []
+														}]
+													}]
 		                    		            }, {
 		                    		            	id: "java",
 		                    		            	name: `
@@ -262,6 +282,15 @@ b{
 		                    		            	    relation: ``
 		                    		            	},
 		                    		            	children: [{
+														id: "ReactJS",
+														name: `<div class="d-block justify-content-center">
+																<img src="images/react_logo.png" width="250px" hieght="250px">
+															</div>` ,
+														data: {
+
+														},
+														children : []
+													},{
 		                    		            		id: "JQUERY",
 		                    		            		name: `
 		                    		            			<div class="d-block justify-content-center">
@@ -757,7 +786,7 @@ b{
 		                    		        			id: "cs",
 		                    		        			name: `
 		                    		        			<div class="btn-dark rounded border border-info p-1">
-		                    		        				C#
+		                    		        				<img src="images/CSHARP.png" width="75px" hieght="75px">
 		                    		        			</div>
 		                    		        			`,
 		                    		        			data: {
@@ -778,7 +807,9 @@ b{
 		                    		            			<li>&emsp;HTML 5</li>
 		                    		            			<li>&emsp;CSS</li>
 		                    		            			<li>&emsp;javascript</li>
-		                    		            			<li>&emsp;JQUERY</li>
+		                    		            			<li>&emsp;&emsp;React.js</li>
+		                    		            			<li>&emsp;&emsp;JQUERY</li>
+		                    		            			<li>&emsp;&emsp;&emsp;AJAX</li>
 		                    		            		<div class="text-center text-danger">Server Side</div>
 		                    		            			<li>&emsp;MYSQLi</li>
 		                    		            			<li>&emsp;PHP</li>
